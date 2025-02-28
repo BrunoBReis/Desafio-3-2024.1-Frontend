@@ -1,0 +1,133 @@
+/* -----------overall----------- */
+/* monserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* definindo variáveis css */
+:root {
+  --back-ground-color: #f0f0f0; /* cor de fundo padrão */
+  --back-ground-color-dark: #d9d9d9; /* cor de fundo para elementos escuros */
+  --primary-color: #ff731a; /* cor primária para destaques */
+}
+
+/* resetando o css */
+* {
+  margin: 0; /* zera a margem */
+  padding: 0; /* zera o padding */
+  box-sizing: border-box; /* define o box-sizing para incluir bordas e padding no tamanho total */
+}
+
+body {
+  /* fontes */
+  font-family: "Montserrat", sans-serif; /* fonte principal */
+  font-weight: 400; /* peso padrão da fonte */
+  font-style: normal; /* estilo normal */
+  line-height: 1.6; /* altura da linha */
+  /* display */
+  display: flex; /* utiliza flexbox para layout */
+  flex-direction: column; /* organiza os itens em coluna */
+  align-items: center; /* centraliza os itens horizontalmente */
+  /* definindo tela */
+  background-color: var(--back-ground-color); /* cor de fundo do body */
+  color: var(--primary-color); /* cor primária para textos */
+  padding: 40px; /* espaçamento interno */
+  height: 100vh; /* ocupa 100% da altura da viewport */
+  width: 100vw; /* ocupa 100% da largura da viewport */
+}
+
+#logo {
+  /* tamanho da imagem */
+  width: 100px; /* largura fixa da logo */
+  height: 100px; /* altura fixa da logo */
+}
+
+/* -----------header----------- */
+.header {
+  /* display */
+  display: flex; /* utiliza flexbox */
+  flex-direction: row; /* organiza os itens em linha */
+  align-items: center; /* centraliza os itens verticalmente */
+  border: 4px solid var(--primary-color); /* borda com cor primária */
+  border-radius: 5px; /* cantos arredondados */
+  width: 100%; /* ocupa toda a largura disponível */
+}
+
+.main-text {
+  /* display */
+  font-size: 1.1rem; /* tamanho da fonte do texto principal */
+  flex: 1; /* ocupa o espaço restante */
+  text-align: center; /* centraliza o texto */
+  /* border: 2px solid var(--primary-color); */ /* (comentado) borda para depuração */
+}
+
+.logo {
+  /* display */
+  display: flex; /* utiliza flexbox */
+  padding: 5px; /* espaçamento interno */
+  border-right: 4px solid var(--primary-color); /* borda direita com cor primária */
+}
+
+/* -----------uf-selecion----------- */
+.uf-selecion {
+  /* display */
+  display: flex; /* utiliza flexbox */
+  flex-direction: column; /* organiza os itens em coluna */
+  align-items: center; /* centraliza os itens */
+  gap: 20px; /* espaço entre os itens */
+  margin-top: 50px; /* margem superior */
+  /* border: 2px solid var(--primary-color); */ /* (comentado) borda para depuração */
+  /* tamanho */
+  font-size: 1rem; /* tamanho da fonte do container */
+  text-align: center; /* centraliza o texto */
+  width: 30%; /* largura do container */
+}
+
+#uf {
+  /* tamanho */
+  width: 100%; /* ocupa toda a largura do container */
+  height: 40px; /* altura fixa para o select */
+  /* fontes */
+  font-size: 16px; /* tamanho da fonte do select */
+  font-weight: 1000; /* peso da fonte */
+  text-align: center; /* centraliza o texto */
+  /* cores */
+  color: black; /* cor do texto */
+  background-color: var(--back-ground-color-dark); /* cor de fundo do select */
+  border-radius: 10px; /* cantos arredondados */
+  /* cursor */
+  border: none; /* sem borda */
+  cursor: pointer; /* cursor pointer ao passar o mouse */
+}
+
+#uf:focus {
+  outline: none; /* remove o contorno padrão ao focar */
+}
+
+#uf option {
+  /* tamanho */
+  font-size: 16px; /* tamanho da fonte das opções */
+  font-weight: 600; /* peso da fonte das opções */
+}
+
+/* -----------municipio table----------- */
+.municipio-table {
+  margin-top: 100px; /* margem superior para separar do conteúdo acima */
+  border: 2px solid var(--primary-color); /* borda com cor primária */
+  border-radius: 5px; /* cantos arredondados */
+  width: 80%; /* largura do container da tabela */
+  text-align: center; /* centraliza o texto dentro do container */
+  padding: 10px; /* espaçamento interno */
+  height: 400px; /* altura fixa do container */
+  max-height: 400px; /* altura máxima do container */
+  overflow-y: auto; /* adiciona barra de rolagem vertical se o conteúdo ultrapassar a altura definida */
+}
+
+.municipio-table table {
+  width: 100%; /* tabela ocupa toda a largura do container */
+  border-collapse: collapse; /* remove espaçamentos entre as células da tabela */
+}
+
+.municipio-table td {
+  padding: 10px; /* espaçamento interno das células */
+  border-right: 3px solid var(--primary-color); /* borda direita das células com cor primária */
+  font-size: 16px; /* tamanho da fonte do conteúdo das células */
+  color: black; /* cor do texto das células */
+}

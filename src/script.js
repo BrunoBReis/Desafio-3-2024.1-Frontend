@@ -27,6 +27,7 @@ const fetchData = (data) => {
 
 // Função para buscar os estados na API
 const fetchStates = () => {
+  municipiosTableBody.innerHTML = "<h4>Nenhum estado selecionado...</h4>";
   const url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
   fetch(url)
     .then(validateResponse)
@@ -70,14 +71,15 @@ const populateMunicipiosTable = (municipios) => {
 const fetchMunicipios = () => {
   // Verifica se a UF foi selecionada; se não, limpa a tabela e interrompe a execução
   if (!uf.value) {
-    municipiosTableBody.innerHTML = "";
+    municipiosTableBody.innerHTML = "<h4>Nenhum estado selecionado...</h4>";
     return;
   }
   const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf.value}/municipios`;
   fetch(url)
     .then(validateResponse)
     .then(populateMunicipiosTable)
-    .catch((error) => {console.error("Erro na requisição", error);
+    .catch((error) => {
+      console.error("Erro na requisição", error);
     });
 };
 
